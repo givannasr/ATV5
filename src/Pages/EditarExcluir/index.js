@@ -75,7 +75,7 @@ export default function EditarOuExcluir() {
                 );
                 tx.executeSql(
                     'UPDATE TELEFONE SET NUMERO = ?, TIPO = ? WHERE ID = ?',
-                    [numero, tipo, id], // Verifique se o ID do telefone é realmente o mesmo do cliente
+                    [numero, tipo, id], 
                     (_, { rowsAffected }) => {
                         if (rowsAffected > 0) {
                             Alert.alert('Sucesso', 'Telefone editado com sucesso');
